@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     android:id="@+id/padre"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,148 +7,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradiente"
-    tools:context="com.example.axelyray.micarrito2.MainActivity">
+    tools:context="com.example.axelyray.micarrito2.MainActivity"
+    android:layout_marginRight="@dimen/btn.margenprincipal"
+    android:layout_marginLeft="@dimen/btn.margenprincipal"
+    android:layout_marginTop="@dimen/btn.margenprincipal">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
+        android:id="@+id/primero"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <LinearLayout
-            android:id="@+id/principal"
+        android:layout_height="@dimen/btn.margin"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/botton1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn.margin2"
+            android:text="@string/botomregistro"
+            android:layout_weight="50"
+            android:theme="@style/ButoonMD"
+            android:textColor="@color/colornegro"
+            />
+        <Button
+            android:id="@+id/botton2"
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:layout_height="@dimen/btn.margin2"
+            android:text="@string/botomhistorial"
+            android:theme="@style/ButoonMD"
+            android:textColor="@color/colornegro"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secundario"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn.margin"
+        android:layout_below="@id/primero">
+        <Button
+            android:id="@+id/botton3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn.margin2"
+            android:text="@string/botomcompras"
+            android:theme="@style/ButoonMD"
+            android:textColor="@color/colornegro"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn.margin2"
+        android:layout_below="@id/secundario">
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginEnd="2dp"
-            android:layout_marginStart="2dp"
-            android:layout_centerHorizontal="true">
-
-            <Button
-                android:id="@+id/registro"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:text="@string/botomregistro"
-                android:textSize="18sp"
-                android:layout_margin="@dimen/btn.margin"/>
-
-            <Button
-                android:id="@+id/historial"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:text="@string/botomhistorial"
-                android:textSize="18sp"
-                android:layout_margin="@dimen/btn.margin"
-               />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/secundario"
-            android:layout_width="wrap_content"
+            android:hint="@string/ingproducto"
+            android:layout_weight="50"/>
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/principal"
-            android:layout_centerHorizontal="true">
+            android:hint="@string/ingprecio"
+            android:layout_weight="50"/>
 
-            <Button
-                android:id="@+id/compras"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:text="@string/botomcompras"
-                android:layout_margin="@dimen/btn.margin2"
+    </LinearLayout>
 
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/terciario"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:layout_alignBottom="@id/terciario"
-            android:layout_below="@id/secundario"
-            android:orientation="horizontal"
-            android:layout_gravity="end|bottom"
-            >
-            <TableLayout
-                android:id="@+id/tabla"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:stretchColumns="1"
-                >
-                <TableRow
-                    android:id="@+id/Cabecera"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:text="@string/producto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textColor="#000000"
-                        />
-
-                    <TextView
-                        android:text="@string/precio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:layout_gravity="center"
-                        android:textSize="18sp"
-                        android:textColor="#000000"
-
-                        />
-                </TableRow>
-
-                <TableRow
-                    android:id="@+id/SeparadorCabecera"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
-
-                    <FrameLayout
-                        android:id="@+id/LineaCabecera"
-                        android:layout_width="fill_parent"
-                        android:layout_height="4dp"
-                        android:layout_span="6"
-                        android:background="#000000" >
-                    </FrameLayout>
-                </TableRow>
-                <TableRow
-                    android:id="@+id/datos"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    >
-
-                    <EditText
-                        android:hint="@string/ingproducto"
-                        android:textSize="14sp"/>
-                    <EditText
-                        android:hint="@string/ingprecio"
-                        android:textSize="14sp"
-                        android:inputType="numberDecimal"/>
-                </TableRow>
-            </TableLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/informacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/botominformacion"
-                android:layout_gravity="end|bottom"
-                />
-        </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

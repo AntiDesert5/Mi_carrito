@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="butoonbase" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/tamañoletra</item>
+    </style>
+
+    <style name="ButoonMD" parent="butoonbase">
+        <item name="colorButtonNormal">@color/colorBotton</item>
+    </style>
+
+
 </resources>
