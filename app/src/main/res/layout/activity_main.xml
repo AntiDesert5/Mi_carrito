@@ -52,17 +52,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/btn.margin2"
         android:layout_below="@id/secundario">
-        <Button
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/ingproducto"
             android:layout_weight="50"/>
-        <Button
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/ingprecio"
             android:layout_weight="50"/>
-
     </LinearLayout>
+
 
 </RelativeLayout>
