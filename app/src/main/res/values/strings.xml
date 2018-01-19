@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mi Carrito</string>
+    <string name="botomregistro">Nuevo Registro</string>
+    <string name="botomhistorial">Historial</string>
+    <string name="botomcompras">Compras Recientes</string>
+    <string name="botominformacion">Informacion de la App</string>
+    <string name="producto">Nombre del Producto</string>
+    <string name="precio">Precio del Producto</string>
+    <string name="ingprecio">Ingrese Precio del Producto</string>
+    <string name="ingproducto">Ingrese Nombre del Producto</string>
+</resources>
